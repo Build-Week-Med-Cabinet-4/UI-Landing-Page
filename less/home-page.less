@@ -37,7 +37,7 @@ section {
         .flex(space-between);
         h3 {
             .h3();
-            padding-left: 3%;
+            padding-left: 0;
         }
         a {
             align-self: flex-end;
@@ -56,7 +56,7 @@ section {
             min-height: 55vh;
             border: 1px solid purple;
             border-radius: 5px;
-            margin: 3%;
+            margin: 1% 2% 0% 0%;
         }
     }
     button {
@@ -73,11 +73,16 @@ section {
         height: 42%;
         margin: 15% 25%;
         border-radius: 7px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         p {
+            align-self: flex-start;
             color: orange;
             border: 1px solid white;
         }
         h4 {
+            align-self: center;
+            font-size: 700%;
             color: white;
             border: darkred 1px solid;
         }
@@ -85,7 +90,7 @@ section {
     }
 }
 h3 {
-    padding: 2% 3% 0 6%;
+    padding: 2% 3% 0 3%;
     .h3();
 }
 .dispos {
@@ -159,7 +164,8 @@ h3 {
         flex-direction: column;
         width: 33%;
         img {
-            padding: 5% 0 0;
+            padding-bottom: 3%;
+            border-radius: 7px;
         }
     }
     .newsText {
