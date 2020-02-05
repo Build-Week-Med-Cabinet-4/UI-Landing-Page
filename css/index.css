@@ -552,21 +552,22 @@ section .links a {
   color: white;
   text-decoration: none;
 }
-section .strainScroller {
+section .strainTitle {
   width: 94%;
   margin: 0 3%;
-  margin: 3% 3% 1%;
+  margin: 2% 3% 1%;
   color: #025c5c;
   display: flex;
   justify-content: space-between;
 }
-section .strainScroller h3 {
+section .strainTitle h3 {
   font-size: 250%;
   font-weight: 600;
   color: #025c5c;
   padding-left: 3%;
 }
-section .strainScroller a {
+section .strainTitle a {
+  align-self: flex-end;
   font-size: 150%;
   color: #025c5c;
   font-weight: 600;
@@ -578,12 +579,17 @@ section .strainSqrs {
   justify-content: flex-start;
   overflow: auto;
 }
-section .strainSqrs div {
-  min-width: 50vh;
+section .strainSqrs .square {
+  min-width: 45vh;
   max-height: 55vh;
   min-height: 50vh;
   border: 1px solid purple;
   margin: 3%;
+}
+section .strainSqrs .square .strainApp {
+  border: 1px solid red;
+  width: 70%;
+  height: 70%;
 }
 section button {
   margin: 1% 0 3% 3%;
@@ -637,8 +643,12 @@ h3 {
 .dispos .dispoTitle {
   padding-left: 3%;
 }
+.dispos .dispoTitle h5 {
+  font-size: 2rem;
+  color: #025c5c;
+}
 .dispos button {
-  margin-right: 3%;
+  width: 92%;
 }
 .dispos button a {
   color: white;

@@ -30,9 +30,9 @@ section {
     .links {
         .links();
     }
-    .strainScroller {
+    .strainTitle {
         .containers();
-        margin: 3% 3% 1%;
+        margin: 2% 3% 1%;
         color: @mainColor;
         .flex(space-between);
         h3 {
@@ -40,6 +40,7 @@ section {
             padding-left: 3%;
         }
         a {
+            align-self: flex-end;
             font-size: 150%;
             color: @mainColor;
             font-weight: 600;
@@ -49,12 +50,17 @@ section {
         .containers();
         .flex(flex-start);
         overflow: auto;
-        div {
-            min-width: 50vh;
+        .square {
+            min-width: 45vh;
             max-height: 55vh;
             min-height: 50vh;
             border: 1px solid purple;
             margin: 3%;
+            .strainApp {
+                border: 1px solid red;
+                width: 70%;
+                height: 70%;
+            }
         }
     }
     button {
@@ -93,10 +99,14 @@ h3 {
     }
     .dispoTitle {
         padding-left: 3%;
+        h5 {
+            font-size: 2rem;
+            color: @mainColor;
+        }
     }
     button {
         .links();
-        margin-right: 3%;
+        width: 92%;
     }
 }
 
