@@ -574,19 +574,19 @@ section .strainScroller a {
 section .strainSqrs {
   width: 94%;
   margin: 0 3%;
-  height: 300px;
-  overflow-y: hidden;
-  overflow-x: auto;
-  border: 1px solid blue;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  overflow: auto;
 }
 section .strainSqrs div {
-  width: 100%;
-  border: 1px solid red;
+  min-width: 50vh;
+  max-height: 55vh;
+  min-height: 50vh;
+  border: 1px solid purple;
+  margin: 3%;
 }
 section button {
-  margin: 1% 0 0 3%;
+  margin: 1% 0 3% 3%;
   width: 8rem;
   letter-spacing: 0.2rem;
   background: linear-gradient(teal, #025c5c);
@@ -610,15 +610,18 @@ h3 {
   color: #025c5c;
 }
 .dispos {
+  overflow: auto;
   padding: 2% 0 3%;
   width: 94%;
   margin: 0 3%;
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  gap: 5%;
+  grid-template-columns: repeat(15, 40vh);
+  grid-template-rows: 1fr;
 }
 .dispos .dispoTiles {
-  padding: 1%;
-  width: 20%;
+  width: 40vh;
+  height: 40vh;
   border: 1px solid blue;
   display: flex;
   justify-content: space-between;
@@ -627,8 +630,15 @@ h3 {
 .dispos .dispoTiles .shirkMe {
   width: 5%;
 }
-.dispos img {
-  padding: 5%;
+.dispos .dispoTiles img {
+  height: 90%;
+  width: 100%;
+}
+.dispos .dispoTitle {
+  padding-left: 3%;
+}
+.dispos button {
+  margin-right: 3%;
 }
 .dispos button a {
   color: white;
@@ -643,7 +653,8 @@ h3 {
   justify-content: space-between;
 }
 .news .newsTile {
-  padding: 2%;
+  background-color: #a8a6a6;
+  border-radius: 7px;
   border: 1px solid orange;
   display: flex;
   justify-content: space-between;
@@ -651,14 +662,21 @@ h3 {
   width: 33%;
 }
 .news .newsTile img {
-  padding: 5%;
+  padding: 5% 0 0;
+}
+.news .newsText {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .news button a {
   color: white;
   text-decoration: none;
 }
 .news h5 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  align-self: center;
+  padding-bottom: 2%;
 }
 .homeBanners {
   height: 20vh;
