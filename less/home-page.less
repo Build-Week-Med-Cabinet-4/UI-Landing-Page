@@ -78,44 +78,54 @@ h3 {
     .containers();
     .flex(flex-start);
     .dispoTiles {
+        padding: 1%;
         width: 20%;
         border: 1px solid blue;
         .flex(space-between);
         flex-direction: column;
-        button {
-            .links();
+        .shirkMe {
+            width: 5%;
         }
     }
-
-    // h3 {
-    //     .h3();
-    //     padding: 3% 0 1%;
-    // }
-    // .dispoTiles {
-    //     padding: 3%;
-    //     border: 1px solid green;
-    //     overflow-x: auto;
-    //     overflow-y: hidden;
-    //     .flex(space-around);
-    //     div {
-    //         border: 1px solid red;
-    //         button {
-    //             .links();
-    //             .button();
-    //         }
-    //     }
-    //     .tileSeparation {
-    //         .flex(space-between);
-    //         flex-direction: column;
-    //     }
-    // }
+    img {
+        padding: 5%;
+    }
+    button {
+        .links();
+    }
 }
+
+// h3 {
+//     .h3();
+//     padding: 3% 0 1%;
+// }
+// .dispoTiles {
+//     padding: 3%;
+//     border: 1px solid green;
+//     overflow-x: auto;
+//     overflow-y: hidden;
+//     .flex(space-around);
+//     div {
+//         border: 1px solid red;
+//         button {
+//             .links();
+//             .button();
+//         }
+//     }
+//     .tileSeparation {
+//         .flex(space-between);
+//         flex-direction: column;
+//     }
+// }
 
 .news {
     .containers();
+    height: 300px;
     border: 1px solid pink;
+    padding: 1% 0;
     .flex(space-between);
     .newsTile {
+        padding: 2%;
         border: 1px solid orange;
         .flex(space-between);
         flex-direction: column;
@@ -123,6 +133,9 @@ h3 {
     }
     button {
         .links();
+    }
+    h5 {
+        font-size: 2.5rem;
     }
 }
 
