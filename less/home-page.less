@@ -29,7 +29,7 @@
 }
 section {
     .links {
-        .links;
+        .links();
     }
     .strainScroller {
         .containers();
@@ -82,6 +82,9 @@ h3 {
         border: 1px solid blue;
         .flex(space-between);
         flex-direction: column;
+        button {
+            .links();
+        }
     }
 
     // h3 {
@@ -107,6 +110,22 @@ h3 {
     //     }
     // }
 }
+
+.news {
+    .containers();
+    border: 1px solid pink;
+    .flex(space-between);
+    .newsTile {
+        border: 1px solid orange;
+        .flex(space-between);
+        flex-direction: column;
+        width: 33%;
+    }
+    button {
+        .links();
+    }
+}
+
 .homeBanners {
     .growing();
 }

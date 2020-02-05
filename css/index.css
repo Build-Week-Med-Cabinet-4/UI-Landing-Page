@@ -623,6 +623,28 @@ h3 {
   justify-content: space-between;
   flex-direction: column;
 }
+.dispos .dispoTiles button a {
+  color: white;
+  text-decoration: none;
+}
+.news {
+  width: 94%;
+  margin: 0 3%;
+  border: 1px solid pink;
+  display: flex;
+  justify-content: space-between;
+}
+.news .newsTile {
+  border: 1px solid orange;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 33%;
+}
+.news button a {
+  color: white;
+  text-decoration: none;
+}
 .homeBanners {
   height: 20vh;
   background-attachment: fixed;
