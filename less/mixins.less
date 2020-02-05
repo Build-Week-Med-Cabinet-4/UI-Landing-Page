@@ -1,0 +1,58 @@
+.button() {
+    width: 8rem;
+    letter-spacing: 0.2rem;
+    background: linear-gradient(teal, @mainColor);
+    color: white;
+    font-weight: 700;
+    border: 1px white solid;
+    border-radius: 3px;
+
+    &:hover {
+        color: black;
+        background: linear-gradient(@mainColor, teal);
+        cursor: pointer;
+    }
+}
+.photoBlindMix() {
+    height: 20vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: 100%;
+    background-position-y: 50%;
+}
+.plantBlind() {
+    background-image: url(../img/jhon-david-plAYVXwJ5cA-unsplash.jpg);
+    .photoBlindMix();
+}
+
+.flex(@justify) {
+    display: flex;
+    justify-content: @justify;
+}
+
+.logo() {
+    a {
+        font-weight: 600;
+        color: white;
+        font-size: 3rem;
+        font-family: @headingFont;
+        text-decoration: none;
+    }
+}
+.h3 {
+    font-size: 250%;
+    font-weight: 600;
+    color: @mainColor;
+}
+.containers() {
+    width: 94%;
+    margin: 0 3%;
+}
+.growing() {
+    .photoBlindMix();
+    background-image: url(../img/robert-nelson--CDNBtuiQYE-unsplash.jpg);
+}
+.test {
+    height: 50vh;
+}
