@@ -192,6 +192,10 @@ header {
     flex-direction: column;
   }
 }
+header a {
+  color: white;
+  text-decoration: none;
+}
 header .logo {
   margin-left: 40%;
 }
@@ -386,6 +390,10 @@ header .navSearch i {
   justify-content: space-between;
   align-items: center;
 }
+.topBanner .h1 .search a {
+  color: white;
+  text-decoration: none;
+}
 .topBanner .h1 .search input {
   width: 70%;
   font-size: 2rem;
@@ -512,6 +520,10 @@ header .navSearch i {
   height: 37vh;
   background-position-y: -27vh;
 }
+.h1Home a {
+  color: white;
+  text-decoration: none;
+}
 .h1Home h1 {
   color: white;
   padding: 4% 0 0 5%;
@@ -535,6 +547,10 @@ header .navSearch i {
   color: black;
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
+}
+section .links a {
+  color: white;
+  text-decoration: none;
 }
 section .strainScroller {
   width: 94%;
@@ -612,10 +628,19 @@ section button:hover {
   border: 1px white solid;
   border-radius: 3px;
 }
+.dispos .dispoTiles div button a {
+  color: white;
+  text-decoration: none;
+}
 .dispos .dispoTiles div button:hover {
   color: black;
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
+}
+.dispos .dispoTiles .tileSeparation {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .homeBanners {
   height: 20vh;
