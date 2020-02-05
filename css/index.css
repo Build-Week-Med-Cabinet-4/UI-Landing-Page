@@ -564,6 +564,7 @@ section .strainScroller h3 {
   font-size: 250%;
   font-weight: 600;
   color: #025c5c;
+  padding-left: 3%;
 }
 section .strainScroller a {
   font-size: 150%;
@@ -577,8 +578,11 @@ section .strainSqrs {
   overflow-y: hidden;
   overflow-x: auto;
   border: 1px solid blue;
+  display: flex;
+  justify-content: space-around;
 }
 section .strainSqrs div {
+  width: 100%;
   border: 1px solid red;
 }
 section button {
@@ -599,45 +603,22 @@ section button:hover {
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
 }
-.dispos {
-  padding: 3% 0;
-  width: 94%;
-  margin: 0 3%;
-}
-.dispos h3 {
+h3 {
+  padding: 2% 3% 0 6%;
   font-size: 250%;
   font-weight: 600;
   color: #025c5c;
-  padding: 3% 0 1%;
+}
+.dispos {
+  padding: 2% 0 3%;
+  width: 94%;
+  margin: 0 3%;
+  display: flex;
+  justify-content: flex-start;
 }
 .dispos .dispoTiles {
-  padding: 3%;
-  border: 1px solid green;
-  display: flex;
-  justify-content: space-around;
-}
-.dispos .dispoTiles div {
-  border: 1px solid green;
-}
-.dispos .dispoTiles div button {
-  width: 8rem;
-  letter-spacing: 0.2rem;
-  background: linear-gradient(teal, #025c5c);
-  color: white;
-  font-weight: 700;
-  border: 1px white solid;
-  border-radius: 3px;
-}
-.dispos .dispoTiles div button a {
-  color: white;
-  text-decoration: none;
-}
-.dispos .dispoTiles div button:hover {
-  color: black;
-  background: linear-gradient(#025c5c, teal);
-  cursor: pointer;
-}
-.dispos .dispoTiles .tileSeparation {
+  width: 20%;
+  border: 1px solid blue;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
