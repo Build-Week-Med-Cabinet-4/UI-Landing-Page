@@ -43,11 +43,6 @@
         }
     }
 }
-body {
-    @media @phone {
-        background: red;
-    }
-}
 section {
     .links {
         .links();
@@ -84,6 +79,10 @@ section {
                 color: @mainColor;
                 text-align: center;
                 font-size: 3.5rem;
+                @media @phone {
+                    font-size: 2rem;
+                    padding-bottom: 3%;
+                }
             }
         }
         @media @tablet {
@@ -162,15 +161,19 @@ h3 {
     grid-template-columns: repeat(15, 40vh);
     grid-template-rows: 1fr;
     @media @tablet {
-        overflow: none;
+        overflow: hidden;
         grid-template-columns: 1fr 1fr;
         .dispoTiles {
             margin-bottom: 5%;
         }
     }
+    @media @phone {
+        display: flex;
+        flex-direction: column;
+    }
     .dispoTiles {
         width: 40vh;
-        height: 40vh;
+        height: 43vh;
         border: @thatGreyBorder;
         .flex(space-between);
         flex-direction: column;
@@ -180,6 +183,14 @@ h3 {
         img {
             height: 90%;
             width: 100%;
+        }
+        @media @phone {
+            width: 90%;
+            margin: 1% 5%;
+            height: 100%;
+            button {
+                padding: 1.5% 0;
+            }
         }
     }
     .dispoTitle {
@@ -221,13 +232,22 @@ h3 {
 
 .news {
     .containers();
-    border: 1px solid pink;
     padding: 1% 0;
     .flex(space-between);
     @media @tablet {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10%;
+    }
+    @media @phone {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        img {
+            height: 40vh;
+            width: 100%;
+        }
     }
     .newsTile {
         border-radius: 7px;
@@ -242,6 +262,9 @@ h3 {
         img {
             border-radius: 7px;
             padding-bottom: 10%;
+            @media @phone {
+                padding: 0;
+            }
             @media @tablet {
                 padding: 5%;
             }

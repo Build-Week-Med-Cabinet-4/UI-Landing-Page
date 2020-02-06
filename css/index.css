@@ -635,11 +635,6 @@ header .navSearch input {
     align-self: flex-end;
   }
 }
-@media (max-width: 500px) {
-  body {
-    background: red;
-  }
-}
 section .links a {
   color: white;
   text-decoration: none;
@@ -683,6 +678,12 @@ section .strainSqrs .square h5 {
   color: #025c5c;
   text-align: center;
   font-size: 3.5rem;
+}
+@media (max-width: 500px) {
+  section .strainSqrs .square h5 {
+    font-size: 2rem;
+    padding-bottom: 3%;
+  }
 }
 @media (max-width: 800px) {
   section .strainSqrs {
@@ -776,16 +777,22 @@ h3 {
 }
 @media (max-width: 800px) {
   .dispos {
-    overflow: none;
+    overflow: hidden;
     grid-template-columns: 1fr 1fr;
   }
   .dispos .dispoTiles {
     margin-bottom: 5%;
   }
 }
+@media (max-width: 500px) {
+  .dispos {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .dispos .dispoTiles {
   width: 40vh;
-  height: 40vh;
+  height: 43vh;
   border: 1px solid rgba(0, 0, 5, 0.3);
   display: flex;
   justify-content: space-between;
@@ -797,6 +804,16 @@ h3 {
 .dispos .dispoTiles img {
   height: 90%;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .dispos .dispoTiles {
+    width: 90%;
+    margin: 1% 5%;
+    height: 100%;
+  }
+  .dispos .dispoTiles button {
+    padding: 1.5% 0;
+  }
 }
 .dispos .dispoTitle {
   padding-left: 3%;
@@ -816,7 +833,6 @@ h3 {
 .news {
   width: 94%;
   margin: 0 3%;
-  border: 1px solid pink;
   padding: 1% 0;
   display: flex;
   justify-content: space-between;
@@ -826,6 +842,17 @@ h3 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10%;
+  }
+}
+@media (max-width: 500px) {
+  .news {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .news img {
+    height: 40vh;
+    width: 100%;
   }
 }
 .news .newsTile {
@@ -845,6 +872,11 @@ h3 {
 .news .newsTile img {
   border-radius: 7px;
   padding-bottom: 10%;
+}
+@media (max-width: 500px) {
+  .news .newsTile img {
+    padding: 0;
+  }
 }
 @media (max-width: 800px) {
   .news .newsTile img {
