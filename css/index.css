@@ -157,7 +157,7 @@ h6 body {
   font-family: "Roboto", sans-serif;
 }
 h1 {
-  font-size: 4.2rem;
+  font-size: 3.5rem;
   font-family: "Permanent Marker", cursive;
 }
 h2 {
@@ -598,7 +598,7 @@ header .navSearch input {
 }
 .h1Home h1 {
   color: white;
-  padding: 10% 0 0 5%;
+  padding: 8% 0 0 5%;
   text-shadow: black 0px 0px 15px, white 0px 0px 10px, black 0px 0px 5px,
             black 0px 0px 2px;
   word-spacing: 5px;
@@ -618,7 +618,7 @@ header .navSearch input {
   border: 1px white solid;
   border-radius: 3px;
   font-size: 1.4rem;
-  padding: 1% 0;
+  padding: 0.8% 0;
   width: 15%;
   margin: 1% 0 2% 5%;
 }
