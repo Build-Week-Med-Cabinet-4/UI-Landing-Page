@@ -13,6 +13,11 @@
 .test {
   height: 50vh;
 }
+.about {
+  margin: 5%;
+  padding: 2%;
+  border-bottom: 1px solid rgba(0, 0, 5, 0.3);
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -923,4 +928,72 @@ footer {
   color: white;
   background: #025c5c;
   padding: 1%;
+}
+.aboutUs h4,
+.aboutUs h2 {
+  color: #025c5c;
+  font-weight: 700;
+}
+.aboutUs h5 {
+  color: teal;
+}
+.aboutUs h4 {
+  margin: 0 3%;
+}
+.aboutUs h5 {
+  margin: 0 5%;
+  font-size: 2.4rem;
+  padding: 0.5%;
+  text-decoration: underline;
+}
+.aboutUs p {
+  margin: 2% 10% 3%;
+}
+.aboutUs .aboutTitle {
+  padding: 1% 0;
+  margin-bottom: 1%;
+  border-bottom: double teal 10px;
+  text-align: center;
+}
+.aboutUs .aboutPeople {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin: 5%;
+  padding: 2%;
+  border-bottom: 1px solid rgba(0, 0, 5, 0.3);
+  width: 94%;
+  margin: 0 3%;
+  text-align: center;
+  text-align: left;
+}
+.aboutUs .aboutPeople h2 {
+  color: #025c5c;
+  font-size: 3.5rem;
+}
+.aboutUs .aboutPeople p {
+  color: teal;
+  font-size: 2rem;
+}
+.aboutUs .RaboutPeople {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  margin: 5%;
+  padding: 2%;
+  border-bottom: 1px solid rgba(0, 0, 5, 0.3);
+  width: 94%;
+  margin: 0 3%;
+  text-align: center;
+  text-align: right;
+}
+.aboutUs .RaboutPeople h2 {
+  color: #025c5c;
+  font-size: 3.5rem;
+}
+.aboutUs .RaboutPeople p {
+  color: teal;
+  font-size: 2rem;
+}
+.left,
+.right {
+  align-self: center;
 }
