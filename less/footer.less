@@ -1,0 +1,30 @@
+footer {
+    text-align: center;
+    color: white;
+    background: @mainColor;
+    padding: 1%;
+    .footerLinks {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        width: 70%;
+        margin: 1% 15%;
+        a {
+            font-size: 1.5rem;
+            color: black;
+        }
+        @media @phone {
+            display: flex;
+            flex-direction: column;
+            a {
+                padding: 2% 0;
+            }
+        }
+    }
+    .footerSpace {
+        margin: 0 15%;
+        .flex(space-around);
+    }
+    .landing {
+        opacity: 0.2;
+    }
+}

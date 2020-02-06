@@ -87,7 +87,7 @@ section {
         }
         @media @tablet {
             display: grid;
-            overflow: none;
+            overflow: hidden;
             grid-template-columns: 1fr 1fr;
             row-gap: 5%;
             .square {
@@ -105,6 +105,7 @@ section {
                 min-height: 20%;
             }
             .strainApp {
+                margin: 15% 25%;
                 width: 15vh;
                 height: 15vh;
                 p {
@@ -127,9 +128,9 @@ section {
         border-radius: 7px;
     }
     .strainApp {
-        width: 50%;
-        height: 44%;
-        margin: 15% 25%;
+        width: 25vh;
+        height: 25vh;
+        margin: 15% 20%;
         border-radius: 7px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -292,10 +293,4 @@ h3 {
         display: none;
     }
     .growing();
-}
-footer {
-    text-align: center;
-    color: white;
-    background: @mainColor;
-    padding: 1%;
 }
