@@ -455,7 +455,7 @@ header .navSearch input {
   background-repeat: no-repeat;
   width: 100%;
   background-size: 100%;
-  background-position-y: 50%;
+  background-position-y: 0%;
 }
 @media (max-width: 800px) {
   .photoSection {
@@ -476,12 +476,24 @@ header .navSearch input {
   background-repeat: no-repeat;
   width: 100%;
   background-size: 100%;
-  background-position-y: 50%;
+  background-position-y: 0%;
 }
 @media (max-width: 800px) {
   .photoSectionDesktop {
     display: none;
   }
+}
+.about {
+  width: 94%;
+  margin: 0 3%;
+  text-align: center;
+}
+.about h2 {
+  color: #025c5c;
+}
+.about p {
+  color: teal;
+  font-size: 2rem;
 }
 @media (max-width: 800px) {
   .triSection {
@@ -761,9 +773,10 @@ h3 {
   background-repeat: no-repeat;
   width: 100%;
   background-size: 100%;
-  background-position-y: 50%;
-  height: 15vh;
+  background-position-y: 0%;
+  height: 18vh;
   background-image: url(../img/robert-nelson--CDNBtuiQYE-unsplash.jpg);
+  background-position-y: 50%;
 }
 footer {
   text-align: center;
