@@ -3,6 +3,13 @@
     margin-left: 3%;
 }
 .h1Home {
+    @media @tablet {
+        display: flex;
+        background-position-y: top;
+    }
+    @media @phone {
+        height: 35vh;
+    }
     .links();
     width: 100%;
     background: url(../img/kym-mackinnon-9FLYDnEdKY0-unsplash.jpg);
@@ -15,15 +22,25 @@
     h1 {
         color: white;
         padding: 10% 0 0 5%;
-        text-shadow: black 0px 0px 15px;
+        text-shadow: black 0px 0px 15px, white 0px 0px 10px, black 0px 0px 5px,
+            black 0px 0px 2px;
         word-spacing: 5px;
         line-height: 120%;
+        @media @phone {
+            font-size: 3rem;
+        }
     }
     button {
         .button();
         padding: 1% 0;
-        width: 10%;
-        margin: 1.5% 0 2% 5%;
+        width: 15%;
+        margin: 1% 0 2% 5%;
+        @media @tablet {
+            padding: 1%;
+            margin-right: 10%;
+            width: 40%;
+            align-self: flex-end;
+        }
     }
 }
 section {
@@ -50,10 +67,11 @@ section {
         .containers();
         .flex(flex-start);
         overflow: auto;
+
         .square {
             min-width: 45vh;
             max-height: 50vh;
-            min-height: 48vh;
+            min-height: 45vh;
             border: @thatGreyBorder;
             border-radius: 5px;
             margin: 1% 2% 0% 0%;
@@ -61,6 +79,43 @@ section {
                 color: @mainColor;
                 text-align: center;
                 font-size: 3.5rem;
+                @media @phone {
+                    font-size: 2rem;
+                    padding-bottom: 3%;
+                }
+            }
+        }
+        @media @tablet {
+            display: grid;
+            overflow: none;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 5%;
+            .square {
+                width: 45%;
+            }
+            .strainApp {
+                width: 22vh;
+                height: 22vh;
+            }
+        }
+        @media @phone {
+            .square {
+                overflow: hidden;
+                min-width: 90%;
+                min-height: 20%;
+            }
+            .strainApp {
+                width: 15vh;
+                height: 15vh;
+                p {
+                    font-size: 1.5rem;
+                    padding: 0;
+                    margin-left: 10%;
+                }
+                h4 {
+                    margin-left: -15%;
+                    font-size: 4rem;
+                }
             }
         }
     }
@@ -105,9 +160,20 @@ h3 {
     gap: 5%;
     grid-template-columns: repeat(15, 40vh);
     grid-template-rows: 1fr;
+    @media @tablet {
+        overflow: hidden;
+        grid-template-columns: 1fr 1fr;
+        .dispoTiles {
+            margin-bottom: 5%;
+        }
+    }
+    @media @phone {
+        display: flex;
+        flex-direction: column;
+    }
     .dispoTiles {
         width: 40vh;
-        height: 40vh;
+        height: 43vh;
         border: @thatGreyBorder;
         .flex(space-between);
         flex-direction: column;
@@ -117,6 +183,14 @@ h3 {
         img {
             height: 90%;
             width: 100%;
+        }
+        @media @phone {
+            width: 90%;
+            margin: 1% 5%;
+            height: 100%;
+            button {
+                padding: 1.5% 0;
+            }
         }
     }
     .dispoTitle {
@@ -158,18 +232,42 @@ h3 {
 
 .news {
     .containers();
-    border: 1px solid pink;
     padding: 1% 0;
     .flex(space-between);
+    @media @tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10%;
+    }
+    @media @phone {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        img {
+            height: 40vh;
+            width: 100%;
+        }
+    }
     .newsTile {
         border-radius: 7px;
         border: @thatGreyBorder;
         .flex(space-between);
         flex-direction: column;
-        width: 30%;
+        width: 20%;
+        @media @tablet {
+            width: 94%;
+            margin-bottom: 6%;
+        }
         img {
             border-radius: 7px;
             padding-bottom: 10%;
+            @media @phone {
+                padding: 0;
+            }
+            @media @tablet {
+                padding: 5%;
+            }
         }
     }
     .newsText {
@@ -190,6 +288,9 @@ h3 {
 }
 
 .homeBanners {
+    @media @tablet {
+        display: none;
+    }
     .growing();
 }
 footer {

@@ -192,12 +192,10 @@ header {
 }
 @media (max-width: 800px) {
   header {
+    display: flex;
     flex-direction: column;
-  }
-}
-@media (max-width: 500px) {
-  header {
-    flex-direction: column;
+    text-align: center;
+    position: initial;
   }
 }
 header a {
@@ -277,8 +275,9 @@ header .navSearch input {
 }
 @media (max-width: 800px) {
   header .navSearch {
-    width: 95%;
-    margin: 0 2.5%;
+    width: 94%;
+    margin: 1% 3%;
+    font-size: 1.5rem;
   }
 }
 .moButtons {
@@ -286,6 +285,23 @@ header .navSearch input {
   justify-content: space-between;
   margin-right: 3%;
   width: 35%;
+}
+@media (max-width: 800px) {
+  .moButtons {
+    width: 100%;
+    display: flexbox;
+    flex-direction: column;
+    margin-right: 0;
+  }
+}
+.moButtons .longerButton {
+  width: 20%;
+}
+@media (max-width: 800px) {
+  .moButtons .longerButton {
+    width: 94%;
+    margin: 0.5% 3%;
+  }
 }
 .moButtons button {
   width: 8rem;
@@ -303,20 +319,14 @@ header .navSearch input {
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
 }
+.moButtons button a {
+  font-size: 1.1rem;
+}
 @media (max-width: 800px) {
   .moButtons button {
-    width: 100%;
-  }
-}
-.moButtons .longerButton {
-  width: 13rem;
-}
-@media (max-width: 800px) {
-  .moButtons {
-    gridborder: 1px solid red;
-    display: grid;
-    justify-content: center;
-    width: 100%;
+    width: 94%;
+    margin: 0.5% 3%;
+    padding: 1.5% 0;
   }
 }
 .topBanner {
@@ -455,7 +465,7 @@ header .navSearch input {
   background-repeat: no-repeat;
   width: 100%;
   background-size: 100%;
-  background-position-y: 50%;
+  background-position-y: 0%;
 }
 @media (max-width: 800px) {
   .photoSection {
@@ -476,12 +486,25 @@ header .navSearch input {
   background-repeat: no-repeat;
   width: 100%;
   background-size: 100%;
-  background-position-y: 50%;
+  background-position-y: 0%;
 }
 @media (max-width: 800px) {
   .photoSectionDesktop {
     display: none;
   }
+}
+.about {
+  width: 94%;
+  margin: 0 3%;
+  text-align: center;
+}
+.about h2 {
+  color: #025c5c;
+  font-size: 3.5rem;
+}
+.about p {
+  color: teal;
+  font-size: 2rem;
 }
 @media (max-width: 800px) {
   .triSection {
@@ -558,6 +581,17 @@ header .navSearch input {
   height: 43vh;
   background-position-y: -15vh;
 }
+@media (max-width: 800px) {
+  .h1Home {
+    display: flex;
+    background-position-y: top;
+  }
+}
+@media (max-width: 500px) {
+  .h1Home {
+    height: 35vh;
+  }
+}
 .h1Home a {
   color: white;
   text-decoration: none;
@@ -565,9 +599,15 @@ header .navSearch input {
 .h1Home h1 {
   color: white;
   padding: 10% 0 0 5%;
-  text-shadow: black 0px 0px 15px;
+  text-shadow: black 0px 0px 15px, white 0px 0px 10px, black 0px 0px 5px,
+            black 0px 0px 2px;
   word-spacing: 5px;
   line-height: 120%;
+}
+@media (max-width: 500px) {
+  .h1Home h1 {
+    font-size: 3rem;
+  }
 }
 .h1Home button {
   width: 8rem;
@@ -579,13 +619,21 @@ header .navSearch input {
   border-radius: 3px;
   font-size: 1.4rem;
   padding: 1% 0;
-  width: 10%;
-  margin: 1.5% 0 2% 5%;
+  width: 15%;
+  margin: 1% 0 2% 5%;
 }
 .h1Home button:hover {
   color: black;
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
+}
+@media (max-width: 800px) {
+  .h1Home button {
+    padding: 1%;
+    margin-right: 10%;
+    width: 40%;
+    align-self: flex-end;
+  }
 }
 section .links a {
   color: white;
@@ -621,7 +669,7 @@ section .strainSqrs {
 section .strainSqrs .square {
   min-width: 45vh;
   max-height: 50vh;
-  min-height: 48vh;
+  min-height: 45vh;
   border: 1px solid rgba(0, 0, 5, 0.3);
   border-radius: 5px;
   margin: 1% 2% 0% 0%;
@@ -630,6 +678,47 @@ section .strainSqrs .square h5 {
   color: #025c5c;
   text-align: center;
   font-size: 3.5rem;
+}
+@media (max-width: 500px) {
+  section .strainSqrs .square h5 {
+    font-size: 2rem;
+    padding-bottom: 3%;
+  }
+}
+@media (max-width: 800px) {
+  section .strainSqrs {
+    display: grid;
+    overflow: none;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5%;
+  }
+  section .strainSqrs .square {
+    width: 45%;
+  }
+  section .strainSqrs .strainApp {
+    width: 22vh;
+    height: 22vh;
+  }
+}
+@media (max-width: 500px) {
+  section .strainSqrs .square {
+    overflow: hidden;
+    min-width: 90%;
+    min-height: 20%;
+  }
+  section .strainSqrs .strainApp {
+    width: 15vh;
+    height: 15vh;
+  }
+  section .strainSqrs .strainApp p {
+    font-size: 1.5rem;
+    padding: 0;
+    margin-left: 10%;
+  }
+  section .strainSqrs .strainApp h4 {
+    margin-left: -15%;
+    font-size: 4rem;
+  }
 }
 section button {
   margin: 1% 0 3% 3%;
@@ -686,9 +775,24 @@ h3 {
   grid-template-columns: repeat(15, 40vh);
   grid-template-rows: 1fr;
 }
+@media (max-width: 800px) {
+  .dispos {
+    overflow: hidden;
+    grid-template-columns: 1fr 1fr;
+  }
+  .dispos .dispoTiles {
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 500px) {
+  .dispos {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .dispos .dispoTiles {
   width: 40vh;
-  height: 40vh;
+  height: 43vh;
   border: 1px solid rgba(0, 0, 5, 0.3);
   display: flex;
   justify-content: space-between;
@@ -700,6 +804,16 @@ h3 {
 .dispos .dispoTiles img {
   height: 90%;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .dispos .dispoTiles {
+    width: 90%;
+    margin: 1% 5%;
+    height: 100%;
+  }
+  .dispos .dispoTiles button {
+    padding: 1.5% 0;
+  }
 }
 .dispos .dispoTitle {
   padding-left: 3%;
@@ -719,10 +833,27 @@ h3 {
 .news {
   width: 94%;
   margin: 0 3%;
-  border: 1px solid pink;
   padding: 1% 0;
   display: flex;
   justify-content: space-between;
+}
+@media (max-width: 800px) {
+  .news {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10%;
+  }
+}
+@media (max-width: 500px) {
+  .news {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .news img {
+    height: 40vh;
+    width: 100%;
+  }
 }
 .news .newsTile {
   border-radius: 7px;
@@ -730,11 +861,27 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 30%;
+  width: 20%;
+}
+@media (max-width: 800px) {
+  .news .newsTile {
+    width: 94%;
+    margin-bottom: 6%;
+  }
 }
 .news .newsTile img {
   border-radius: 7px;
   padding-bottom: 10%;
+}
+@media (max-width: 500px) {
+  .news .newsTile img {
+    padding: 0;
+  }
+}
+@media (max-width: 800px) {
+  .news .newsTile img {
+    padding: 5%;
+  }
 }
 .news .newsText {
   display: flex;
@@ -761,9 +908,15 @@ h3 {
   background-repeat: no-repeat;
   width: 100%;
   background-size: 100%;
-  background-position-y: 50%;
-  height: 15vh;
+  background-position-y: 0%;
+  height: 18vh;
   background-image: url(../img/robert-nelson--CDNBtuiQYE-unsplash.jpg);
+  background-position-y: 50%;
+}
+@media (max-width: 800px) {
+  .homeBanners {
+    display: none;
+  }
 }
 footer {
   text-align: center;

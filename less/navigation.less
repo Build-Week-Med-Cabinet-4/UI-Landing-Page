@@ -7,11 +7,12 @@ header {
     position: fixed;
     width: 100%;
     @media @tablet {
+        display: flex;
         flex-direction: column;
+        text-align: center;
+        position: initial;
     }
-    @media @phone {
-        flex-direction: column;
-    }
+
     .links();
     .logo {
         margin-left: 40%;
@@ -57,8 +58,9 @@ header {
             width: 100%;
         }
         @media @tablet {
-            width: 95%;
-            margin: 0 2.5%;
+            width: 94%;
+            margin: 1% 3%;
+            font-size: 1.5rem;
         }
     }
 }
@@ -66,21 +68,29 @@ header {
     .flex(space-between);
     margin-right: 3%;
     width: 35%;
+    @media @tablet {
+        width: 100%;
+        display: flexbox;
+        flex-direction: column;
+        margin-right: 0;
+    }
+    .longerButton {
+        width: 20%;
+        @media @tablet {
+            width: 94%;
+            margin: 0.5% 3%;
+        }
+    }
     button {
         .button();
         padding: 2% 0;
-        @media @tablet {
-            width: 100%;
+        a {
+            font-size: 1.1rem;
         }
-    }
-    .longerButton {
-        width: 13rem;
-    }
-    @media @tablet {
-        display: grid;
-        gridborder: 1px solid red;
-        display: grid;
-        justify-content: center;
-        width: 100%;
+        @media @tablet {
+            width: 94%;
+            margin: 0.5% 3%;
+            padding: 1.5% 0;
+        }
     }
 }
