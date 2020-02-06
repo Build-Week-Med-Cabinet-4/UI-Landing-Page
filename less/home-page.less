@@ -3,19 +3,19 @@
     margin-left: 3%;
 }
 .h1Home {
+    .links();
     width: 100%;
-    background: url(../img/dark-green-leafed-plant-2731663.jpg);
-
+    background: url(../img/kym-mackinnon-9FLYDnEdKY0-unsplash.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 37vh;
-    background-position-y: -27vh;
+    height: 43vh;
+    background-position-y: -15vh;
     // background-position: center;
     // position: relative;
     h1 {
         color: white;
-        padding: 4% 0 0 5%;
-        text-shadow: black 0px 0px 10px;
+        padding: 10% 0 0 5%;
+        text-shadow: black 0px 0px 15px;
         word-spacing: 5px;
         line-height: 120%;
     }
@@ -27,60 +27,174 @@
     }
 }
 section {
-    .strainScroller {
+    .links {
+        .links();
+    }
+    .strainTitle {
         .containers();
-        margin: 3% 3% 1%;
+        margin: 2% 3% 1%;
         color: @mainColor;
         .flex(space-between);
         h3 {
             .h3();
+            padding-left: 0;
         }
         a {
+            align-self: flex-end;
             font-size: 150%;
             color: @mainColor;
             font-weight: 600;
         }
     }
     .strainSqrs {
-        width: 94%;
-        margin: 0 3%;
-        height: 300px;
-        overflow-y: hidden;
-        overflow-x: auto;
-        border: 1px solid blue;
-        // transform: rotate(-90deg);
-        // transform-origin: right top;
-        div {
-            border: 1px solid red;
-        }
-    }
-    button {
-        margin: 1% 0 0 3%;
-        .button();
-        border: 1px solid salmon;
-        width: 17rem;
-        padding: 1% 0;
-    }
-}
-.dispos {
-    padding: 3% 0;
-    .containers();
-    h3 {
-        .h3();
-        padding: 3% 0 1%;
-    }
-    .dispoTiles {
-        padding: 3%;
-        border: 1px solid green;
-        .flex(space-around);
-        div {
-            border: 1px solid green;
-            button {
-                .button();
+        .containers();
+        .flex(flex-start);
+        overflow: auto;
+        .square {
+            min-width: 45vh;
+            max-height: 50vh;
+            min-height: 48vh;
+            border: @thatGreyBorder;
+            border-radius: 5px;
+            margin: 1% 2% 0% 0%;
+            h5 {
+                color: @mainColor;
+                text-align: center;
+                font-size: 3.5rem;
             }
         }
     }
+    button {
+        margin: 1% 0 3% 3%;
+        .button();
+        width: 17rem;
+        padding: 1% 0;
+        border-radius: 7px;
+    }
+    .strainApp {
+        width: 50%;
+        height: 44%;
+        margin: 15% 25%;
+        border-radius: 7px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        p {
+            font-size: 2rem;
+            align-self: flex-start;
+            color: purple;
+        }
+
+        h4 {
+            justify-self: center;
+            align-self: center;
+            font-size: 700%;
+            color: white;
+        }
+        background: linear-gradient(to top, teal, aqua);
+    }
 }
+h3 {
+    padding: 2% 3% 0 3%;
+    .h3();
+}
+.dispos {
+    overflow: auto;
+    padding: 2% 0 3%;
+    .containers();
+    display: grid;
+    gap: 5%;
+    grid-template-columns: repeat(15, 40vh);
+    grid-template-rows: 1fr;
+    .dispoTiles {
+        width: 40vh;
+        height: 40vh;
+        border: @thatGreyBorder;
+        .flex(space-between);
+        flex-direction: column;
+        .shirkMe {
+            width: 5%;
+        }
+        img {
+            height: 90%;
+            width: 100%;
+        }
+    }
+    .dispoTitle {
+        padding-left: 3%;
+        h5 {
+            font-size: 2rem;
+            color: @mainColor;
+        }
+    }
+    button {
+        .links();
+        width: 92%;
+        padding: 3%;
+    }
+}
+
+// h3 {
+//     .h3();
+//     padding: 3% 0 1%;
+// }
+// .dispoTiles {
+//     padding: 3%;
+//     border: 1px solid green;
+//     overflow-x: auto;
+//     overflow-y: hidden;
+//     .flex(space-around);
+//     div {
+//         border: 1px solid red;
+//         button {
+//             .links();
+//             .button();
+//         }
+//     }
+//     .tileSeparation {
+//         .flex(space-between);
+//         flex-direction: column;
+//     }
+// }
+
+.news {
+    .containers();
+    border: 1px solid pink;
+    padding: 1% 0;
+    .flex(space-between);
+    .newsTile {
+        border-radius: 7px;
+        border: @thatGreyBorder;
+        .flex(space-between);
+        flex-direction: column;
+        width: 30%;
+        img {
+            border-radius: 7px;
+            padding-bottom: 10%;
+        }
+    }
+    .newsText {
+        .flex(space-between);
+        flex-direction: column;
+    }
+    button {
+        .links();
+        padding: 2%;
+        width: 90%;
+        margin: 5%;
+    }
+    h5 {
+        font-size: 2.5rem;
+        align-self: center;
+        padding: 2%;
+    }
+}
+
 .homeBanners {
     .growing();
+}
+footer {
+    text-align: center;
+    color: white;
+    background: @mainColor;
+    padding: 1%;
 }

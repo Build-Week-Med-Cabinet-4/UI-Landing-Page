@@ -169,7 +169,7 @@ h4 {
   padding-bottom: 10px;
 }
 h6 {
-  font-size: 4rem;
+  font-size: 1.6rem;
 }
 p {
   line-height: 1.5;
@@ -186,11 +186,23 @@ header {
   align-items: center;
   background-color: #025c5c;
   padding: 1% 0 1.5%;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
 }
 @media (max-width: 500px) {
   header {
     flex-direction: column;
   }
+}
+header a {
+  color: white;
+  text-decoration: none;
 }
 header .logo {
   margin-left: 40%;
@@ -198,13 +210,18 @@ header .logo {
 header .logo a {
   font-weight: 600;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "Permanent Marker", cursive;
   text-decoration: none;
 }
+@media screen {
+  header .logo a {
+    font-size: 1.8rem;
+  }
+}
 @media (max-width: 800px) {
   header .logo {
-    margin-left: 5%;
+    margin-left: 2%;
   }
 }
 header .buttons {
@@ -230,6 +247,7 @@ header .buttons button {
   font-weight: 700;
   border: 1px white solid;
   border-radius: 3px;
+  font-size: 1.4rem;
   padding: 3% 0;
   margin: 0 5%;
 }
@@ -257,8 +275,11 @@ header .navSearch {
 header .navSearch input {
   width: 100%;
 }
-header .navSearch i {
-  z-index: 9;
+@media (max-width: 800px) {
+  header .navSearch {
+    width: 95%;
+    margin: 0 2.5%;
+  }
 }
 .moButtons {
   display: flex;
@@ -274,6 +295,7 @@ header .navSearch i {
   font-weight: 700;
   border: 1px white solid;
   border-radius: 3px;
+  font-size: 1.4rem;
   padding: 2% 0;
 }
 .moButtons button:hover {
@@ -281,8 +303,22 @@ header .navSearch i {
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
 }
+@media (max-width: 800px) {
+  .moButtons button {
+    width: 100%;
+  }
+}
 .moButtons .longerButton {
-  width: 10.5rem;
+  width: 13rem;
+}
+@media (max-width: 800px) {
+  .moButtons {
+    width: 95%;
+    border: 1px solid red;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+  }
 }
 .topBanner {
   display: flex;
@@ -386,6 +422,10 @@ header .navSearch i {
   justify-content: space-between;
   align-items: center;
 }
+.topBanner .h1 .search a {
+  color: white;
+  text-decoration: none;
+}
 .topBanner .h1 .search input {
   width: 70%;
   font-size: 2rem;
@@ -398,6 +438,7 @@ header .navSearch i {
   font-weight: 700;
   border: 1px white solid;
   border-radius: 3px;
+  font-size: 1.4rem;
   padding: 2% 0;
   width: 28%;
   font-size: 1.6rem;
@@ -500,22 +541,31 @@ header .navSearch i {
 .logoHome a {
   font-weight: 600;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "Permanent Marker", cursive;
   text-decoration: none;
 }
+@media screen {
+  .logoHome a {
+    font-size: 1.8rem;
+  }
+}
 .h1Home {
   width: 100%;
-  background: url(../img/dark-green-leafed-plant-2731663.jpg);
+  background: url(../img/kym-mackinnon-9FLYDnEdKY0-unsplash.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 37vh;
-  background-position-y: -27vh;
+  height: 43vh;
+  background-position-y: -15vh;
+}
+.h1Home a {
+  color: white;
+  text-decoration: none;
 }
 .h1Home h1 {
   color: white;
-  padding: 4% 0 0 5%;
-  text-shadow: black 0px 0px 10px;
+  padding: 10% 0 0 5%;
+  text-shadow: black 0px 0px 15px;
   word-spacing: 5px;
   line-height: 120%;
 }
@@ -527,6 +577,7 @@ header .navSearch i {
   font-weight: 700;
   border: 1px white solid;
   border-radius: 3px;
+  font-size: 1.4rem;
   padding: 1% 0;
   width: 10%;
   margin: 1.5% 0 2% 5%;
@@ -536,20 +587,26 @@ header .navSearch i {
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
 }
-section .strainScroller {
+section .links a {
+  color: white;
+  text-decoration: none;
+}
+section .strainTitle {
   width: 94%;
   margin: 0 3%;
-  margin: 3% 3% 1%;
+  margin: 2% 3% 1%;
   color: #025c5c;
   display: flex;
   justify-content: space-between;
 }
-section .strainScroller h3 {
+section .strainTitle h3 {
   font-size: 250%;
   font-weight: 600;
   color: #025c5c;
+  padding-left: 0;
 }
-section .strainScroller a {
+section .strainTitle a {
+  align-self: flex-end;
   font-size: 150%;
   color: #025c5c;
   font-weight: 600;
@@ -557,16 +614,25 @@ section .strainScroller a {
 section .strainSqrs {
   width: 94%;
   margin: 0 3%;
-  height: 300px;
-  overflow-y: hidden;
-  overflow-x: auto;
-  border: 1px solid blue;
+  display: flex;
+  justify-content: flex-start;
+  overflow: auto;
 }
-section .strainSqrs div {
-  border: 1px solid red;
+section .strainSqrs .square {
+  min-width: 45vh;
+  max-height: 50vh;
+  min-height: 48vh;
+  border: 1px solid rgba(0, 0, 5, 0.3);
+  border-radius: 5px;
+  margin: 1% 2% 0% 0%;
+}
+section .strainSqrs .square h5 {
+  color: #025c5c;
+  text-align: center;
+  font-size: 3.5rem;
 }
 section button {
-  margin: 1% 0 0 3%;
+  margin: 1% 0 3% 3%;
   width: 8rem;
   letter-spacing: 0.2rem;
   background: linear-gradient(teal, #025c5c);
@@ -574,48 +640,120 @@ section button {
   font-weight: 700;
   border: 1px white solid;
   border-radius: 3px;
-  border: 1px solid salmon;
+  font-size: 1.4rem;
   width: 17rem;
   padding: 1% 0;
+  border-radius: 7px;
 }
 section button:hover {
   color: black;
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
 }
-.dispos {
-  padding: 3% 0;
-  width: 94%;
-  margin: 0 3%;
+section .strainApp {
+  width: 50%;
+  height: 44%;
+  margin: 15% 25%;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: linear-gradient(to top, teal, aqua);
 }
-.dispos h3 {
+section .strainApp p {
+  font-size: 2rem;
+  align-self: flex-start;
+  color: purple;
+}
+section .strainApp h4 {
+  justify-self: center;
+  align-self: center;
+  font-size: 700%;
+  color: white;
+}
+h3 {
+  padding: 2% 3% 0 3%;
   font-size: 250%;
   font-weight: 600;
   color: #025c5c;
-  padding: 3% 0 1%;
+}
+.dispos {
+  overflow: auto;
+  padding: 2% 0 3%;
+  width: 94%;
+  margin: 0 3%;
+  display: grid;
+  gap: 5%;
+  grid-template-columns: repeat(15, 40vh);
+  grid-template-rows: 1fr;
 }
 .dispos .dispoTiles {
-  padding: 3%;
-  border: 1px solid green;
+  width: 40vh;
+  height: 40vh;
+  border: 1px solid rgba(0, 0, 5, 0.3);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-direction: column;
 }
-.dispos .dispoTiles div {
-  border: 1px solid green;
+.dispos .dispoTiles .shirkMe {
+  width: 5%;
 }
-.dispos .dispoTiles div button {
-  width: 8rem;
-  letter-spacing: 0.2rem;
-  background: linear-gradient(teal, #025c5c);
+.dispos .dispoTiles img {
+  height: 90%;
+  width: 100%;
+}
+.dispos .dispoTitle {
+  padding-left: 3%;
+}
+.dispos .dispoTitle h5 {
+  font-size: 2rem;
+  color: #025c5c;
+}
+.dispos button {
+  width: 92%;
+  padding: 3%;
+}
+.dispos button a {
   color: white;
-  font-weight: 700;
-  border: 1px white solid;
-  border-radius: 3px;
+  text-decoration: none;
 }
-.dispos .dispoTiles div button:hover {
-  color: black;
-  background: linear-gradient(#025c5c, teal);
-  cursor: pointer;
+.news {
+  width: 94%;
+  margin: 0 3%;
+  border: 1px solid pink;
+  padding: 1% 0;
+  display: flex;
+  justify-content: space-between;
+}
+.news .newsTile {
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 5, 0.3);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30%;
+}
+.news .newsTile img {
+  border-radius: 7px;
+  padding-bottom: 10%;
+}
+.news .newsText {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.news button {
+  padding: 2%;
+  width: 90%;
+  margin: 5%;
+}
+.news button a {
+  color: white;
+  text-decoration: none;
+}
+.news h5 {
+  font-size: 2.5rem;
+  align-self: center;
+  padding: 2%;
 }
 .homeBanners {
   height: 20vh;
@@ -624,5 +762,12 @@ section button:hover {
   width: 100%;
   background-size: 100%;
   background-position-y: 50%;
+  height: 15vh;
   background-image: url(../img/robert-nelson--CDNBtuiQYE-unsplash.jpg);
+}
+footer {
+  text-align: center;
+  color: white;
+  background: #025c5c;
+  padding: 1%;
 }

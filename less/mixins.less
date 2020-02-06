@@ -6,7 +6,7 @@
     font-weight: 700;
     border: 1px white solid;
     border-radius: 3px;
-
+    font-size: 1.4rem;
     &:hover {
         color: black;
         background: linear-gradient(@mainColor, teal);
@@ -35,9 +35,12 @@
     a {
         font-weight: 600;
         color: white;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-family: @headingFont;
         text-decoration: none;
+        @media screen {
+            font-size: 1.8rem;
+        }
     }
 }
 .h3 {
@@ -51,8 +54,15 @@
 }
 .growing() {
     .photoBlindMix();
+    height: 15vh;
     background-image: url(../img/robert-nelson--CDNBtuiQYE-unsplash.jpg);
 }
 .test {
     height: 50vh;
+}
+.links() {
+    a {
+        color: white;
+        text-decoration: none;
+    }
 }
