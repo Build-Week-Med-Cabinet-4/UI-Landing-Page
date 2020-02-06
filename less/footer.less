@@ -10,13 +10,14 @@ footer {
         margin: 1% 15%;
         a {
             font-size: 1.5rem;
-            color: black;
+            color: rgb(115, 226, 206);
         }
         @media @phone {
-            display: flex;
-            flex-direction: column;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             a {
-                padding: 2% 0;
+                padding: 2%;
+                margin: 10% 0 15%;
             }
         }
     }
