@@ -4,9 +4,11 @@
 }
 .h1Home {
     @media @tablet {
-        background-position-y: 10vh;
         display: flex;
-        height: 50vh;
+        background-position-y: top;
+    }
+    @media @phone {
+        height: 35vh;
     }
     .links();
     width: 100%;
@@ -20,11 +22,12 @@
     h1 {
         color: white;
         padding: 10% 0 0 5%;
-        text-shadow: black 0px 0px 15px;
+        text-shadow: black 0px 0px 15px, white 0px 0px 10px, black 0px 0px 5px,
+            black 0px 0px 2px;
         word-spacing: 5px;
         line-height: 120%;
-        @media @tablet {
-            padding-top: 30%;
+        @media @phone {
+            font-size: 3rem;
         }
     }
     button {
@@ -34,12 +37,17 @@
         margin: 1% 0 2% 5%;
         @media @tablet {
             padding: 1%;
-            width: 25%;
+            margin-right: 10%;
+            width: 40%;
             align-self: flex-end;
         }
     }
 }
-
+body {
+    @media @phone {
+        background: red;
+    }
+}
 section {
     .links {
         .links();
@@ -64,6 +72,20 @@ section {
         .containers();
         .flex(flex-start);
         overflow: auto;
+
+        .square {
+            min-width: 45vh;
+            max-height: 50vh;
+            min-height: 45vh;
+            border: @thatGreyBorder;
+            border-radius: 5px;
+            margin: 1% 2% 0% 0%;
+            h5 {
+                color: @mainColor;
+                text-align: center;
+                font-size: 3.5rem;
+            }
+        }
         @media @tablet {
             display: grid;
             overflow: none;
@@ -77,17 +99,24 @@ section {
                 height: 22vh;
             }
         }
-        .square {
-            min-width: 45vh;
-            max-height: 50vh;
-            min-height: 45vh;
-            border: @thatGreyBorder;
-            border-radius: 5px;
-            margin: 1% 2% 0% 0%;
-            h5 {
-                color: @mainColor;
-                text-align: center;
-                font-size: 3.5rem;
+        @media @phone {
+            .square {
+                overflow: hidden;
+                min-width: 90%;
+                min-height: 20%;
+            }
+            .strainApp {
+                width: 15vh;
+                height: 15vh;
+                p {
+                    font-size: 1.5rem;
+                    padding: 0;
+                    margin-left: 10%;
+                }
+                h4 {
+                    margin-left: -15%;
+                    font-size: 4rem;
+                }
             }
         }
     }
