@@ -1,0 +1,45 @@
+.aboutUs {
+    h4,
+    h2 {
+        color: @mainColor;
+        font-weight: 700;
+    }
+    h5 {
+        color: teal;
+    }
+    h4 {
+        margin: 0 3%;
+    }
+    h5 {
+        margin: 0 5%;
+        font-size: 2.4rem;
+        padding: 0.5%;
+        text-decoration: underline;
+    }
+    p {
+        margin: 2% 10% 3%;
+    }
+    .aboutTitle {
+        padding: 1% 0;
+        margin-bottom: 1%;
+        border-bottom: double teal 10px;
+        text-align: center;
+    }
+    .aboutPeople {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        .about();
+        text-align: left;
+    }
+
+    .RaboutPeople {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        .about();
+        text-align: right;
+    }
+}
+.left,
+.right {
+    align-self: center;
+}

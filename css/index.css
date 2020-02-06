@@ -13,6 +13,11 @@
 .test {
   height: 50vh;
 }
+.about {
+  margin: 5%;
+  padding: 2%;
+  border-bottom: 1px solid rgba(0, 0, 5, 0.3);
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -157,7 +162,7 @@ h6 body {
   font-family: "Roboto", sans-serif;
 }
 h1 {
-  font-size: 4.2rem;
+  font-size: 3.5rem;
   font-family: "Permanent Marker", cursive;
 }
 h2 {
@@ -328,6 +333,39 @@ header .navSearch input {
     margin: 0.5% 3%;
     padding: 1.5% 0;
   }
+}
+footer {
+  text-align: center;
+  color: white;
+  background: #025c5c;
+  padding: 1%;
+}
+footer .footerLinks {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  width: 70%;
+  margin: 1% 15%;
+}
+footer .footerLinks a {
+  font-size: 1.5rem;
+  color: black;
+}
+@media (max-width: 500px) {
+  footer .footerLinks {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footerLinks a {
+    padding: 2% 0;
+  }
+}
+footer .footerSpace {
+  margin: 0 15%;
+  display: flex;
+  justify-content: space-around;
+}
+footer .landing {
+  opacity: 0.2;
 }
 .topBanner {
   display: flex;
@@ -598,7 +636,7 @@ header .navSearch input {
 }
 .h1Home h1 {
   color: white;
-  padding: 10% 0 0 5%;
+  padding: 8% 0 0 5%;
   text-shadow: black 0px 0px 15px, white 0px 0px 10px, black 0px 0px 5px,
             black 0px 0px 2px;
   word-spacing: 5px;
@@ -618,7 +656,7 @@ header .navSearch input {
   border: 1px white solid;
   border-radius: 3px;
   font-size: 1.4rem;
-  padding: 1% 0;
+  padding: 0.8% 0;
   width: 15%;
   margin: 1% 0 2% 5%;
 }
@@ -688,7 +726,7 @@ section .strainSqrs .square h5 {
 @media (max-width: 800px) {
   section .strainSqrs {
     display: grid;
-    overflow: none;
+    overflow: hidden;
     grid-template-columns: 1fr 1fr;
     row-gap: 5%;
   }
@@ -707,6 +745,7 @@ section .strainSqrs .square h5 {
     min-height: 20%;
   }
   section .strainSqrs .strainApp {
+    margin: 15% 25%;
     width: 15vh;
     height: 15vh;
   }
@@ -740,9 +779,9 @@ section button:hover {
   cursor: pointer;
 }
 section .strainApp {
-  width: 50%;
-  height: 44%;
-  margin: 15% 25%;
+  width: 25vh;
+  height: 25vh;
+  margin: 15% 20%;
   border-radius: 7px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -918,9 +957,71 @@ h3 {
     display: none;
   }
 }
-footer {
+.aboutUs h4,
+.aboutUs h2 {
+  color: #025c5c;
+  font-weight: 700;
+}
+.aboutUs h5 {
+  color: teal;
+}
+.aboutUs h4 {
+  margin: 0 3%;
+}
+.aboutUs h5 {
+  margin: 0 5%;
+  font-size: 2.4rem;
+  padding: 0.5%;
+  text-decoration: underline;
+}
+.aboutUs p {
+  margin: 2% 10% 3%;
+}
+.aboutUs .aboutTitle {
+  padding: 1% 0;
+  margin-bottom: 1%;
+  border-bottom: double teal 10px;
   text-align: center;
-  color: white;
-  background: #025c5c;
-  padding: 1%;
+}
+.aboutUs .aboutPeople {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin: 5%;
+  padding: 2%;
+  border-bottom: 1px solid rgba(0, 0, 5, 0.3);
+  width: 94%;
+  margin: 0 3%;
+  text-align: center;
+  text-align: left;
+}
+.aboutUs .aboutPeople h2 {
+  color: #025c5c;
+  font-size: 3.5rem;
+}
+.aboutUs .aboutPeople p {
+  color: teal;
+  font-size: 2rem;
+}
+.aboutUs .RaboutPeople {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  margin: 5%;
+  padding: 2%;
+  border-bottom: 1px solid rgba(0, 0, 5, 0.3);
+  width: 94%;
+  margin: 0 3%;
+  text-align: center;
+  text-align: right;
+}
+.aboutUs .RaboutPeople h2 {
+  color: #025c5c;
+  font-size: 3.5rem;
+}
+.aboutUs .RaboutPeople p {
+  color: teal;
+  font-size: 2rem;
+}
+.left,
+.right {
+  align-self: center;
 }
