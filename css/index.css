@@ -303,6 +303,9 @@ header .navSearch input {
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
 }
+.moButtons button a {
+  font-size: 1.1rem;
+}
 @media (max-width: 800px) {
   .moButtons button {
     width: 100%;
@@ -490,6 +493,7 @@ header .navSearch input {
 }
 .about h2 {
   color: #025c5c;
+  font-size: 3.5rem;
 }
 .about p {
   color: teal;
@@ -742,7 +746,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  width: 30%;
+  width: 20%;
 }
 .news .newsTile img {
   border-radius: 7px;
