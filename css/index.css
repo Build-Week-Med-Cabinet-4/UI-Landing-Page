@@ -270,7 +270,7 @@ header .location {
 }
 header .navSearch {
   width: 25%;
-  font-size: 1.6rem;
+  font-size: 125%;
 }
 header .navSearch input {
   width: 100%;
@@ -313,8 +313,7 @@ header .navSearch input {
 }
 @media (max-width: 800px) {
   .moButtons {
-    width: 95%;
-    border: 1px solid red;
+    gridborder: 1px solid red;
     display: grid;
     justify-content: center;
     width: 100%;
@@ -323,7 +322,8 @@ header .navSearch input {
 .topBanner {
   display: flex;
   justify-content: space-between;
-  margin: 5% 0;
+  margin: 0 0 5%;
+  padding-top: 10%;
 }
 @media (max-width: 800px) {
   .topBanner {
