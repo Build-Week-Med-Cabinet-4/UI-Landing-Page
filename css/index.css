@@ -251,8 +251,11 @@ header .buttons button {
   border: 1px white solid;
   border-radius: 3px;
   font-size: 1.4rem;
-  padding: 3% 0;
+  padding: 2% 0;
   margin: 0 5%;
+}
+header .buttons button a {
+  font-size: 1.1rem;
 }
 header .buttons button:hover {
   color: black;
@@ -289,7 +292,7 @@ header .navSearch input {
   display: flex;
   justify-content: space-between;
   margin-right: 3%;
-  width: 35%;
+  width: 32%;
 }
 @media (max-width: 800px) {
   .moButtons {
@@ -300,7 +303,7 @@ header .navSearch input {
   }
 }
 .moButtons .longerButton {
-  width: 20%;
+  width: 22%;
 }
 @media (max-width: 800px) {
   .moButtons .longerButton {
@@ -317,7 +320,7 @@ header .navSearch input {
   border: 1px white solid;
   border-radius: 3px;
   font-size: 1.4rem;
-  padding: 2% 0;
+  padding: 1% 0;
 }
 .moButtons button:hover {
   color: black;
@@ -532,6 +535,7 @@ footer .landing {
   }
 }
 .about {
+  padding: 3% 0;
   width: 94%;
   margin: 0 3%;
   text-align: center;
@@ -542,7 +546,7 @@ footer .landing {
 }
 .about p {
   color: teal;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 @media (max-width: 800px) {
   .triSection {
@@ -587,7 +591,7 @@ footer .landing {
   }
 }
 .triSection .icons div p {
-  padding: 5% 5% 15%;
+  padding: 5% 5% 10%;
   color: teal;
 }
 @media (max-width: 800px) {
@@ -989,6 +993,7 @@ h3 {
   margin: 5%;
   padding: 2%;
   border-bottom: 1px solid rgba(0, 0, 5, 0.3);
+  padding: 3% 0;
   width: 94%;
   margin: 0 3%;
   text-align: center;
@@ -1000,7 +1005,7 @@ h3 {
 }
 .aboutUs .aboutPeople p {
   color: teal;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .aboutUs .RaboutPeople {
   display: grid;
@@ -1008,6 +1013,7 @@ h3 {
   margin: 5%;
   padding: 2%;
   border-bottom: 1px solid rgba(0, 0, 5, 0.3);
+  padding: 3% 0;
   width: 94%;
   margin: 0 3%;
   text-align: center;
@@ -1019,9 +1025,25 @@ h3 {
 }
 .aboutUs .RaboutPeople p {
   color: teal;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 .left,
 .right {
   align-self: center;
+}
+.strainInfo {
+  padding: 3%;
+  border-radius: 7px;
+  width: 94%;
+  margin: 0 3%;
+  background: rgba(32, 178, 171, 0.116);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.strainInfo h3 {
+  margin: 1% 0 2%;
+  padding-left: 0;
+}
+.strainInfo p {
+  padding-left: 3%;
 }
