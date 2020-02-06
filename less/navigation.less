@@ -3,6 +3,12 @@ header {
     align-items: center;
     background-color: @mainColor;
     padding: 1% 0 1.5%;
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    @media @tablet {
+        flex-direction: column;
+    }
     @media @phone {
         flex-direction: column;
     }
@@ -11,7 +17,7 @@ header {
         margin-left: 40%;
         .logo();
         @media @tablet {
-            margin-left: 5%;
+            margin-left: 2%;
         }
     }
     .buttons {
@@ -19,6 +25,7 @@ header {
         .flex(space-between);
         flex-direction: row;
         width: 15%;
+
         @media @phone {
             width: 95%;
             display: flex;
@@ -49,8 +56,9 @@ header {
         input {
             width: 100%;
         }
-        i {
-            z-index: 9;
+        @media @tablet {
+            width: 95%;
+            margin: 0 2.5%;
         }
     }
 }
@@ -61,8 +69,19 @@ header {
     button {
         .button();
         padding: 2% 0;
+        @media @tablet {
+            width: 100%;
+        }
     }
     .longerButton {
         width: 13rem;
+    }
+    @media @tablet {
+        display: grid;
+        width: 95%;
+        border: 1px solid red;
+        display: grid;
+        justify-content: center;
+        width: 100%;
     }
 }

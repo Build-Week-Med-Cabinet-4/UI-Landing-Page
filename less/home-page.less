@@ -5,17 +5,17 @@
 .h1Home {
     .links();
     width: 100%;
-    background: url(../img/dark-green-leafed-plant-2731663.jpg);
+    background: url(../img/kym-mackinnon-9FLYDnEdKY0-unsplash.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 37vh;
-    background-position-y: -27vh;
+    height: 43vh;
+    background-position-y: -15vh;
     // background-position: center;
     // position: relative;
     h1 {
         color: white;
-        padding: 4% 0 0 5%;
-        text-shadow: black 0px 0px 10px;
+        padding: 10% 0 0 5%;
+        text-shadow: black 0px 0px 15px;
         word-spacing: 5px;
         line-height: 120%;
     }
@@ -52,34 +52,40 @@ section {
         overflow: auto;
         .square {
             min-width: 45vh;
-            max-height: 60vh;
-            min-height: 55vh;
-            border: 1px solid purple;
+            max-height: 50vh;
+            min-height: 48vh;
+            border: @thatGreyBorder;
             border-radius: 5px;
             margin: 1% 2% 0% 0%;
+            h5 {
+                color: @mainColor;
+                text-align: center;
+                font-size: 3.5rem;
+            }
         }
     }
     button {
         margin: 1% 0 3% 3%;
         .button();
-        border: 1px solid salmon;
         width: 17rem;
         padding: 1% 0;
         border-radius: 7px;
     }
     .strainApp {
         width: 50%;
-        height: 42%;
+        height: 44%;
         margin: 15% 25%;
         border-radius: 7px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         p {
+            font-size: 2rem;
             align-self: flex-start;
             color: purple;
         }
 
         h4 {
+            justify-self: center;
             align-self: center;
             font-size: 700%;
             color: white;
@@ -102,7 +108,7 @@ h3 {
     .dispoTiles {
         width: 40vh;
         height: 40vh;
-        border: 1px solid blue;
+        border: @thatGreyBorder;
         .flex(space-between);
         flex-direction: column;
         .shirkMe {
@@ -157,7 +163,7 @@ h3 {
     .flex(space-between);
     .newsTile {
         border-radius: 7px;
-        border: 1px solid rgba(0, 0, 5, 0.3);
+        border: @thatGreyBorder;
         .flex(space-between);
         flex-direction: column;
         width: 30%;

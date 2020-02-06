@@ -186,6 +186,14 @@ header {
   align-items: center;
   background-color: #025c5c;
   padding: 1% 0 1.5%;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+}
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+  }
 }
 @media (max-width: 500px) {
   header {
@@ -202,13 +210,18 @@ header .logo {
 header .logo a {
   font-weight: 600;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "Permanent Marker", cursive;
   text-decoration: none;
 }
+@media screen {
+  header .logo a {
+    font-size: 1.8rem;
+  }
+}
 @media (max-width: 800px) {
   header .logo {
-    margin-left: 5%;
+    margin-left: 2%;
   }
 }
 header .buttons {
@@ -262,8 +275,11 @@ header .navSearch {
 header .navSearch input {
   width: 100%;
 }
-header .navSearch i {
-  z-index: 9;
+@media (max-width: 800px) {
+  header .navSearch {
+    width: 95%;
+    margin: 0 2.5%;
+  }
 }
 .moButtons {
   display: flex;
@@ -287,8 +303,22 @@ header .navSearch i {
   background: linear-gradient(#025c5c, teal);
   cursor: pointer;
 }
+@media (max-width: 800px) {
+  .moButtons button {
+    width: 100%;
+  }
+}
 .moButtons .longerButton {
   width: 13rem;
+}
+@media (max-width: 800px) {
+  .moButtons {
+    width: 95%;
+    border: 1px solid red;
+    display: grid;
+    justify-content: center;
+    width: 100%;
+  }
 }
 .topBanner {
   display: flex;
@@ -511,17 +541,22 @@ header .navSearch i {
 .logoHome a {
   font-weight: 600;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-family: "Permanent Marker", cursive;
   text-decoration: none;
 }
+@media screen {
+  .logoHome a {
+    font-size: 1.8rem;
+  }
+}
 .h1Home {
   width: 100%;
-  background: url(../img/dark-green-leafed-plant-2731663.jpg);
+  background: url(../img/kym-mackinnon-9FLYDnEdKY0-unsplash.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 37vh;
-  background-position-y: -27vh;
+  height: 43vh;
+  background-position-y: -15vh;
 }
 .h1Home a {
   color: white;
@@ -529,8 +564,8 @@ header .navSearch i {
 }
 .h1Home h1 {
   color: white;
-  padding: 4% 0 0 5%;
-  text-shadow: black 0px 0px 10px;
+  padding: 10% 0 0 5%;
+  text-shadow: black 0px 0px 15px;
   word-spacing: 5px;
   line-height: 120%;
 }
@@ -585,11 +620,16 @@ section .strainSqrs {
 }
 section .strainSqrs .square {
   min-width: 45vh;
-  max-height: 60vh;
-  min-height: 55vh;
-  border: 1px solid purple;
+  max-height: 50vh;
+  min-height: 48vh;
+  border: 1px solid rgba(0, 0, 5, 0.3);
   border-radius: 5px;
   margin: 1% 2% 0% 0%;
+}
+section .strainSqrs .square h5 {
+  color: #025c5c;
+  text-align: center;
+  font-size: 3.5rem;
 }
 section button {
   margin: 1% 0 3% 3%;
@@ -601,7 +641,6 @@ section button {
   border: 1px white solid;
   border-radius: 3px;
   font-size: 1.4rem;
-  border: 1px solid salmon;
   width: 17rem;
   padding: 1% 0;
   border-radius: 7px;
@@ -613,7 +652,7 @@ section button:hover {
 }
 section .strainApp {
   width: 50%;
-  height: 42%;
+  height: 44%;
   margin: 15% 25%;
   border-radius: 7px;
   display: grid;
@@ -621,10 +660,12 @@ section .strainApp {
   background: linear-gradient(to top, teal, aqua);
 }
 section .strainApp p {
+  font-size: 2rem;
   align-self: flex-start;
   color: purple;
 }
 section .strainApp h4 {
+  justify-self: center;
   align-self: center;
   font-size: 700%;
   color: white;
@@ -648,7 +689,7 @@ h3 {
 .dispos .dispoTiles {
   width: 40vh;
   height: 40vh;
-  border: 1px solid blue;
+  border: 1px solid rgba(0, 0, 5, 0.3);
   display: flex;
   justify-content: space-between;
   flex-direction: column;
