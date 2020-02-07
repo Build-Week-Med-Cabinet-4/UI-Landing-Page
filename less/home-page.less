@@ -67,7 +67,6 @@ section {
         .containers();
         .flex(flex-start);
         overflow: auto;
-        border: 2px solid blue;
         .square {
             display: grid;
             min-width: 20vw;
@@ -167,10 +166,8 @@ h3 {
     grid-template-rows: 1fr;
     @media @tablet {
         overflow: hidden;
+        display: grid;
         grid-template-columns: 1fr 1fr;
-        .dispoTiles {
-            margin-bottom: 5%;
-        }
     }
     @media @phone {
         display: flex;
@@ -188,6 +185,9 @@ h3 {
         img {
             height: 90%;
             width: 100%;
+        }
+        @media @tablet {
+            width: 95%;
         }
         @media @phone {
             width: 90%;

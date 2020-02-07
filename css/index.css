@@ -275,11 +275,22 @@ header .location {
   font-size: 1.4rem;
 }
 header .navSearch {
-  width: 25%;
-  font-size: 125%;
+  width: 30%;
+  font-size: 145%;
+  margin-top: 1%;
+}
+header .navSearch:hover p {
+  display: grid;
+  color: white;
+}
+header .navSearch p {
+  color: #025c5c;
+  width: 125%;
+  margin-bottom: -4%;
 }
 header .navSearch input {
   width: 100%;
+  padding: 1.5%;
 }
 @media (max-width: 800px) {
   header .navSearch {
@@ -708,7 +719,6 @@ section .strainSqrs {
   display: flex;
   justify-content: flex-start;
   overflow: auto;
-  border: 2px solid blue;
 }
 section .strainSqrs .square {
   display: grid;
@@ -824,10 +834,8 @@ h3 {
 @media (max-width: 800px) {
   .dispos {
     overflow: hidden;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-  .dispos .dispoTiles {
-    margin-bottom: 5%;
   }
 }
 @media (max-width: 500px) {
@@ -850,6 +858,11 @@ h3 {
 .dispos .dispoTiles img {
   height: 90%;
   width: 100%;
+}
+@media (max-width: 800px) {
+  .dispos .dispoTiles {
+    width: 95%;
+  }
 }
 @media (max-width: 500px) {
   .dispos .dispoTiles {
@@ -984,6 +997,9 @@ h3 {
 .aboutUs p {
   margin: 2% 10% 3%;
 }
+.aboutUs img {
+  padding: 5%;
+}
 @media (max-width: 500px) {
   .aboutUs img {
     align-self: start;
@@ -1064,6 +1080,18 @@ h3 {
     width: 15%;
   }
 }
+@media (max-width: 500px) {
+  .strainInfo {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .strainInfo .strainSqrs {
+  padding: 2%;
+  display: flex;
+  justify-self: center;
   justify-content: center;
+}
+.strainInfo .detailsOnStrain {
+  padding: 2% 2% 2% 0;
 }

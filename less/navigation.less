@@ -55,10 +55,23 @@ header {
         font-size: 1.4rem;
     }
     .navSearch {
-        width: 25%;
-        font-size: 125%;
+        width: 30%;
+        font-size: 145%;
+        margin-top: 1%;
+        &:hover {
+            p {
+                display: grid;
+                color: white;
+            }
+        }
+        p {
+            color: @mainColor;
+            width: 125%;
+            margin-bottom: -4%;
+        }
         input {
             width: 100%;
+            padding: 1.5%;
         }
         @media @tablet {
             width: 94%;
