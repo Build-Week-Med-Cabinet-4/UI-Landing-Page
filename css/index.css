@@ -288,7 +288,7 @@ header .navSearch p {
   width: 125%;
   margin-bottom: -4%;
 }
-@media screen {
+@media (max-width: 800px) {
   header .navSearch p {
     font-size: 80%;
     padding-bottom: 3%;
@@ -739,7 +739,7 @@ section .strainSqrs .square {
   min-height: 20vh;
   border: 1px solid rgba(0, 0, 5, 0.3);
   border-radius: 5px;
-  margin: 1% 2% 0% 0%;
+  margin: 1% 2% 1%;
 }
 section .strainSqrs .square h5 {
   color: #025c5c;
@@ -813,7 +813,7 @@ section .strainApp {
   justify-self: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 6% 0;
+  margin: 10% 0;
   background: linear-gradient(to top, teal, aqua);
 }
 section .strainApp .sativa {
@@ -827,6 +827,7 @@ section .strainApp .indica {
   color: purple;
 }
 section .strainApp p {
+  padding-left: 10%;
   font-size: 2rem;
 }
 section .strainApp h4 {
