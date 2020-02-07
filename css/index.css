@@ -287,6 +287,7 @@ header .navSearch p {
   color: #025c5c;
   width: 125%;
   margin-bottom: -4%;
+  font-size: 1rem;
 }
 @media (max-width: 800px) {
   header .navSearch p {
@@ -327,7 +328,7 @@ header .navSearch input {
   }
 }
 .moButtons .longerButton {
-  width: 22%;
+  width: 50%;
 }
 @media (max-width: 800px) {
   .moButtons .longerButton {
