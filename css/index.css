@@ -275,11 +275,35 @@ header .location {
   font-size: 1.4rem;
 }
 header .navSearch {
-  width: 25%;
-  font-size: 125%;
+  width: 30%;
+  font-size: 145%;
+  margin-top: 1%;
+}
+header .navSearch:hover p {
+  display: grid;
+  color: white;
+}
+header .navSearch p {
+  color: #025c5c;
+  width: 125%;
+  margin-bottom: -4%;
+}
+@media (max-width: 800px) {
+  header .navSearch p {
+    font-size: 80%;
+    padding-bottom: 3%;
+    margin-left: -12%;
+  }
+}
+@media (max-width: 500px) {
+  header .navSearch p {
+    font-size: 75%;
+    color: white;
+  }
 }
 header .navSearch input {
   width: 100%;
+  padding: 1.5%;
 }
 @media (max-width: 800px) {
   header .navSearch {
@@ -708,7 +732,6 @@ section .strainSqrs {
   display: flex;
   justify-content: flex-start;
   overflow: auto;
-  border: 2px solid blue;
 }
 section .strainSqrs .square {
   display: grid;
@@ -716,7 +739,7 @@ section .strainSqrs .square {
   min-height: 20vh;
   border: 1px solid rgba(0, 0, 5, 0.3);
   border-radius: 5px;
-  margin: 1% 2% 0% 0%;
+  margin: 1% 2% 1%;
 }
 section .strainSqrs .square h5 {
   color: #025c5c;
@@ -740,9 +763,8 @@ section .strainSqrs .square h5 {
     min-width: 80%;
   }
   section .strainSqrs .strainApp {
-    margin: 15% 20%;
-    width: 22vh;
-    height: 22vh;
+    width: 1.6in;
+    height: 1.6in;
   }
 }
 @media (max-width: 500px) {
@@ -752,9 +774,8 @@ section .strainSqrs .square h5 {
     min-height: 20%;
   }
   section .strainSqrs .strainApp {
-    margin: 15% 25%;
-    width: 15vh;
-    height: 15vh;
+    width: 1.3in;
+    height: 1.3in;
   }
   section .strainSqrs .strainApp p {
     font-size: 1.5rem;
@@ -762,7 +783,7 @@ section .strainSqrs .square h5 {
     margin-left: 10%;
   }
   section .strainSqrs .strainApp h4 {
-    margin-left: -15%;
+    margin-left: -5%;
     font-size: 4rem;
   }
 }
@@ -792,18 +813,28 @@ section .strainApp {
   justify-self: center;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 6% 0;
+  margin: 10% 0;
   background: linear-gradient(to top, teal, aqua);
 }
-section .strainApp p {
-  font-size: 2rem;
+section .strainApp .sativa {
+  color: green;
+  text-shadow: white 0 0 2px;
+  text-shadow: black 0 0 1px;
+}
+section .strainApp .indica {
+  text-shadow: white 0 0 2px;
+  text-shadow: black 0 0 1px;
   color: purple;
 }
+section .strainApp p {
+  padding-left: 10%;
+  font-size: 2rem;
+}
 section .strainApp h4 {
-  font-size: 700%;
+  font-size: 550%;
   color: white;
   align-self: center;
-  margin-left: -15%;
+  margin-left: -25%;
 }
 h3 {
   padding: 2% 3% 0 3%;
@@ -824,10 +855,8 @@ h3 {
 @media (max-width: 800px) {
   .dispos {
     overflow: hidden;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-  .dispos .dispoTiles {
-    margin-bottom: 5%;
   }
 }
 @media (max-width: 500px) {
@@ -850,6 +879,11 @@ h3 {
 .dispos .dispoTiles img {
   height: 90%;
   width: 100%;
+}
+@media (max-width: 800px) {
+  .dispos .dispoTiles {
+    width: 95%;
+  }
 }
 @media (max-width: 500px) {
   .dispos .dispoTiles {
@@ -969,6 +1003,12 @@ h3 {
   color: #025c5c;
   font-weight: 700;
 }
+@media (max-width: 500px) {
+  .aboutUs h4,
+  .aboutUs h2 {
+    padding: 5%;
+  }
+}
 .aboutUs h5 {
   color: teal;
 }
@@ -984,6 +1024,9 @@ h3 {
 .aboutUs p {
   margin: 2% 10% 3%;
 }
+.aboutUs img {
+  padding: 5%;
+}
 @media (max-width: 500px) {
   .aboutUs img {
     align-self: start;
@@ -994,6 +1037,11 @@ h3 {
   margin-bottom: 1%;
   border-bottom: double teal 10px;
   text-align: center;
+}
+@media (max-width: 500px) {
+  .aboutUs .aboutTitle {
+    padding: 5%;
+  }
 }
 .aboutUs .aboutPeople {
   display: grid;
@@ -1060,10 +1108,21 @@ h3 {
   padding: 2% 0%;
 }
 @media (max-width: 800px) {
+  .strainInfo {
+    display: flex;
+    flex-direction: column;
+  }
   .strainInfo .square {
     width: 15%;
+    border: hidden;
   }
 }
 .strainInfo .strainSqrs {
+  padding: 2%;
+  display: flex;
+  justify-self: center;
   justify-content: center;
+}
+.strainInfo .detailsOnStrain {
+  padding: 2% 2% 2% 0;
 }
